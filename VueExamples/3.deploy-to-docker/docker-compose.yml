@@ -1,0 +1,13 @@
+version: "2"
+services:
+  vue:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # 镜像名称
+    image: vue:1.0.0 
+    ports:
+      - 5000:80
+    restart: always
+    # 容器名称
+    container_name: "vue"
