@@ -8,7 +8,7 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
-import connection from "../utils/message"
+import connection from "../utils/chat"
 export default {
   name: "home",
   components: {

@@ -8,5 +8,7 @@
 
 * [SignalR使用](4.signalr-client-example/README.md)
 
+* [SignalR带身份使用](5.signalr-client-jwt-example/README.md)
+
   
 

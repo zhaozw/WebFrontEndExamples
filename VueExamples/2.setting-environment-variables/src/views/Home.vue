@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div>当前环境变量:{{env}}</div>
+    <div>当前模式:{{env}}</div>
     <div>当前webapi请求地址:{{VUE_APP_API_URL}}</div>
 
     <img alt="Vue logo" src="../assets/logo.png">
@@ -23,8 +23,5 @@ export default {
       VUE_APP_API_URL:process.env.VUE_APP_API_URL
     }
   },
-  created(){
-
-  }
 }
 </script>
