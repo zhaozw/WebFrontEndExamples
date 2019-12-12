@@ -14,11 +14,11 @@ npm i @aspnet/signalr
 
 ### 新建
 
-[message.js](utils/message.js)
+[message.js](src/utils/message.js)
 
 ### 修改
 
-[Home.vue](views/Home.vue)
+[Home.vue](src/views/Home.vue)
 
 ### 运行
 
