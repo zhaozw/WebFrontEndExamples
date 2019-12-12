@@ -6,5 +6,7 @@
 
 * [部署到docker上](3.deploy-to-docker/README.md)
 
+* [SignalR使用](4.signalr-client-example/README.md)
+
   
 
