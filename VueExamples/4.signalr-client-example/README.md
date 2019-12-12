@@ -28,7 +28,7 @@ export default conneciton;
 
 ### 修改
 
-[Home.vue](views/Home.vue)
+[Home.vue](src/views/Home.vue)
 
 ```vue
 <script>
