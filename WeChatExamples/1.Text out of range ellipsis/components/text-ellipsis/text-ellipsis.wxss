@@ -1,0 +1,13 @@
+/* components/text-ellipsis/text-ellipsis.wxss */
+/* 多行省略号 */
+
+.multi-line {
+  width: 600rpx;
+  display: -webkit-box;
+  overflow: hidden; /*超出部分隐藏*/
+  text-overflow: ellipsis;
+  word-wrap: break-word; /*全部换号*/
+  white-space: normal !important; /*强制换行*/
+  -webkit-line-clamp: 2; /*要显示行数*/
+  -webkit-box-orient: vertical; /*从上向下垂直排列子元素*/
+}

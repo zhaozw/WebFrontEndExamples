@@ -6,5 +6,8 @@
 <view>单行超出省略号</view>
 <view class="single-line">这是单行超长长长长长长长长长长长长长长长长长长长长文字</view>
 
-<view>多行超出省</view>
+<view>多行超出省略号</view>
 <view class="multi-line">这是多行超长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长文字</view>
+
+<view>组件的多行超出省略号</view>
+<text-ellipsis outside-style="outside-style">这是多行超长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长文字</text-ellipsis>

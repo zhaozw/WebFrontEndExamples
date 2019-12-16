@@ -24,3 +24,10 @@
   -webkit-line-clamp: 2; /*要显示行数*/
   -webkit-box-orient: vertical; /*从上向下垂直排列子元素*/
 }
+/* 使用外部class样式 */
+.outside-style{
+  width: 400rpx !important;
+  color: red;
+  -webkit-line-clamp: 3 !important;
+  font-size: 28rpx
+}
