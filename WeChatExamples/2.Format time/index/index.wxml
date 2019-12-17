@@ -1,0 +1,7 @@
+<view class="intro">欢迎使用代码片段，可在控制台查看代码片段的说明和文档</view>
+<wxs src="tools.wxs" module="tools" />
+
+<view>原时间</view>
+<view>{{time}}</view>
+<view>格式化后时间</view>
+<view>{{tools.formatTime(time,"MM.dd HH:mm")}}</view>
