@@ -1,0 +1,460 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>SignalR带身份使用 · 前端笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="林一怂儿">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../6.cookie/" />
+    
+    
+    <link rel="prev" href="../4.signalr-client/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Vue示例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1.initial/">
+            
+                <a href="../1.initial/">
+            
+                    
+                    初识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../2.setting-environment-variables/">
+            
+                <a href="../2.setting-environment-variables/">
+            
+                    
+                    环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../3.deploy-to-docker/">
+            
+                <a href="../3.deploy-to-docker/">
+            
+                    
+                    部署到docker上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../4.signalr-client/">
+            
+                <a href="../4.signalr-client/">
+            
+                    
+                    SignalR使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    SignalR带身份使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../6.cookie/">
+            
+                <a href="../6.cookie/">
+            
+                    
+                    Cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../7.navigation-guards-sample/">
+            
+                <a href="../7.navigation-guards-sample/">
+            
+                    
+                    导航守卫样例-登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../8.axios/">
+            
+                <a href="../8.axios/">
+            
+                    
+                    axios请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../WeChatExamples/">
+            
+                <a href="../../WeChatExamples/">
+            
+                    
+                    WeChat示例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../WeChatExamples/1.Text out of range ellipsis/">
+            
+                <a href="../../WeChatExamples/1.Text out of range ellipsis/">
+            
+                    
+                    文字超出省略号表示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../WeChatExamples/2.Format time/">
+            
+                <a href="../../WeChatExamples/2.Format time/">
+            
+                    
+                    时间格式化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >SignalR带身份使用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="signal-r-&#x5E26;token&#x8FDE;&#x63A5;">Signal R &#x5E26;Token&#x8FDE;&#x63A5;</h1>
+<h2 id="&#x4F9D;&#x8D56;&#x5305;">&#x4F9D;&#x8D56;&#x5305;</h2>
+<pre><code class="lang-shell">npm install axios
+npm i @aspnet/signalr
+</code></pre>
+<h2 id="&#x4E3B;&#x8981;&#x4EE3;&#x7801;">&#x4E3B;&#x8981;&#x4EE3;&#x7801;</h2>
+<p><a href="src/utils/chat.js">chat.js</a></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> signalR = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;@aspnet/signalr&quot;</span>);
+<span class="hljs-keyword">let</span> config = {
+    <span class="hljs-attr">token</span>:<span class="hljs-string">&quot;&quot;</span>
+};
+<span class="hljs-keyword">let</span> conneciton = <span class="hljs-keyword">new</span> signalR.HubConnectionBuilder()
+    .withUrl(<span class="hljs-string">&quot;http://localhost:5000/chatHub&quot;</span>, { <span class="hljs-attr">accessTokenFactory</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> config.token }).build();
+conneciton.on(<span class="hljs-string">&quot;ReceiveMessage&quot;</span>, (user, message) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${user}</span>:<span class="hljs-subst">${message}</span>`</span>);
+})
+<span class="hljs-keyword">export</span> {
+    conneciton,
+    config
+};
+</code></pre>
+<p><a href="src/views/Home.vue">Home.vue</a> &#x6458;&#x8981;</p>
+<pre><code class="lang-vue">&lt;script&gt;
+//..
+const axios = require(&quot;axios&quot;).default;
+axios.defaults.baseURL = &quot;http://localhost:5000/api/&quot;;
+import { conneciton, config } from &quot;../utils/chat&quot;;
+export default {
+  //...
+  created() {
+    axios
+      .post(&quot;user/login&quot;, {
+        username: &quot;linyisonger&quot;,
+        password: &quot;123456&quot;
+      })
+      .then(res =&gt; {
+        console.log(res);
+        if (res.data.token) {
+          console.log(&quot;&#x767B;&#x5F55;&#x6210;&#x529F;,&#x5F00;&#x59CB;&#x8FDE;&#x63A5;&quot;);
+          config.token = res.data.token;
+          conneciton.start();
+        }
+      });
+  }
+};
+&lt;/script&gt;
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../4.signalr-client/" class="navigation navigation-prev " aria-label="Previous page: SignalR使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../6.cookie/" class="navigation navigation-next " aria-label="Next page: Cookie">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"SignalR带身份使用","level":"1.2.5","depth":2,"next":{"title":"Cookie","level":"1.2.6","depth":2,"path":"VueExamples/6.cookie/README.md","ref":"VueExamples/6.cookie/README.md","articles":[]},"previous":{"title":"SignalR使用","level":"1.2.4","depth":2,"path":"VueExamples/4.signalr-client/README.md","ref":"VueExamples/4.signalr-client/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-sharing","-search","highlight","search-plus","github","sharing-plus","chapter-fold","code","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/linyisonger"},"livereload":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"fontsettings":{"theme":"night","family":"serif","size":2},"highlight":{},"sharing":{"qq":false,"all":["facebook","google","weibo","qq"],"douban":false,"facebook":false,"weibo":false,"whatsapp":false,"line":false,"google":false,"qzone":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"林一怂儿","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端笔记","language":"zh-hans","gitbook":"3.2.3","description":"都不晓得这个详情再哪里看"},"file":{"path":"VueExamples/5.signalr-client-jwt/README.md","mtime":"2019-12-12T07:55:49.171Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-15T02:16:30.278Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

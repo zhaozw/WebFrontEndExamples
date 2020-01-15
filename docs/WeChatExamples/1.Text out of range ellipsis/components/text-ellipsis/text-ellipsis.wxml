@@ -1,0 +1,4 @@
+<view class="multi-line outside-style">
+  <slot>
+  </slot>
+</view>

@@ -1,0 +1,450 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>时间格式化 · 前端笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="林一怂儿">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../1.Text out of range ellipsis/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../VueExamples/">
+            
+                <a href="../../VueExamples/">
+            
+                    
+                    Vue示例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../VueExamples/1.initial/">
+            
+                <a href="../../VueExamples/1.initial/">
+            
+                    
+                    初识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../VueExamples/2.setting-environment-variables/">
+            
+                <a href="../../VueExamples/2.setting-environment-variables/">
+            
+                    
+                    环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../VueExamples/3.deploy-to-docker/">
+            
+                <a href="../../VueExamples/3.deploy-to-docker/">
+            
+                    
+                    部署到docker上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../VueExamples/4.signalr-client/">
+            
+                <a href="../../VueExamples/4.signalr-client/">
+            
+                    
+                    SignalR使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../VueExamples/5.signalr-client-jwt/">
+            
+                <a href="../../VueExamples/5.signalr-client-jwt/">
+            
+                    
+                    SignalR带身份使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../VueExamples/6.cookie/">
+            
+                <a href="../../VueExamples/6.cookie/">
+            
+                    
+                    Cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../VueExamples/7.navigation-guards-sample/">
+            
+                <a href="../../VueExamples/7.navigation-guards-sample/">
+            
+                    
+                    导航守卫样例-登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../VueExamples/8.axios/">
+            
+                <a href="../../VueExamples/8.axios/">
+            
+                    
+                    axios请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    WeChat示例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../1.Text out of range ellipsis/">
+            
+                <a href="../1.Text out of range ellipsis/">
+            
+                    
+                    文字超出省略号表示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    时间格式化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >时间格式化</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x65F6;&#x95F4;&#x683C;&#x5F0F;&#x5316;">&#x65F6;&#x95F4;&#x683C;&#x5F0F;&#x5316;</h1>
+<h2 id="&#x9884;&#x89C8;&#x6548;&#x679C;">&#x9884;&#x89C8;&#x6548;&#x679C;</h2>
+<p><img src="preview.png" alt="preview"></p>
+<h2 id="&#x4E3B;&#x8981;&#x4EE3;&#x7801;">&#x4E3B;&#x8981;&#x4EE3;&#x7801;</h2>
+<p><a href="index/tools.wxs">tools.wxs</a></p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> formatTime = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">date, format = <span class="hljs-string">&quot;&quot;</span></span>) </span>{
+  <span class="hljs-keyword">var</span> y = date.substring(<span class="hljs-number">0</span>, <span class="hljs-number">4</span>);   <span class="hljs-comment">// &#x5E74;</span>
+  <span class="hljs-keyword">var</span> m = date.substring(<span class="hljs-number">5</span>, <span class="hljs-number">7</span>);   <span class="hljs-comment">// &#x6708; </span>
+  <span class="hljs-keyword">var</span> d = date.substring(<span class="hljs-number">8</span>, <span class="hljs-number">10</span>);  <span class="hljs-comment">// &#x5929;</span>
+  <span class="hljs-keyword">var</span> h = date.substring(<span class="hljs-number">11</span>, <span class="hljs-number">13</span>); <span class="hljs-comment">// &#x65F6;</span>
+  <span class="hljs-keyword">var</span> _m = date.substring(<span class="hljs-number">14</span>, <span class="hljs-number">16</span>);<span class="hljs-comment">// &#x5206;</span>
+  <span class="hljs-keyword">var</span> s = date.substring(<span class="hljs-number">17</span>, <span class="hljs-number">19</span>); <span class="hljs-comment">// &#x79D2;</span>
+  <span class="hljs-comment">//&#x83B7;&#x53D6;&#x6709;&#x51E0;&#x4E2A; y</span>
+  <span class="hljs-keyword">var</span> yC = (format.split(<span class="hljs-string">&apos;y&apos;</span>)).length - <span class="hljs-number">1</span>
+  <span class="hljs-comment">//&#x8F93;&#x51FA;&#x7684;&#x5E74;&#x4EFD;</span>
+  <span class="hljs-keyword">var</span> rY = y.substring(y.length - yC, y.length);
+  <span class="hljs-comment">//&#x521B;&#x5EFA;yC&#x957F;&#x5EA6;&#x7684;y&#x5B57;&#x7B26;&#x4E32; &#x6765;&#x66FF;&#x6362;&#x6210;rY&#x957F;&#x5EA6;&#x7684;&#x5E74;&#x4EFD;</span>
+  format = format.replace(createStr(<span class="hljs-string">&quot;y&quot;</span>, yC), rY)
+    .replace(<span class="hljs-string">&quot;MM&quot;</span>, m) <span class="hljs-comment">// &#x6708;</span>
+    .replace(<span class="hljs-string">&quot;dd&quot;</span>, d) <span class="hljs-comment">// &#x5929;</span>
+    .replace(<span class="hljs-string">&quot;HH&quot;</span>, h) <span class="hljs-comment">// &#x65F6;</span>
+    .replace(<span class="hljs-string">&quot;mm&quot;</span>, _m)<span class="hljs-comment">// &#x5206;</span>
+    .replace(<span class="hljs-string">&quot;ss&quot;</span>, s) <span class="hljs-comment">// &#x79D2;</span>
+  <span class="hljs-keyword">return</span> format;
+}
+<span class="hljs-keyword">var</span> createStr = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">s, c</span>) </span>{
+  <span class="hljs-keyword">var</span> r = <span class="hljs-string">&quot;&quot;</span>;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; c; i++) {
+    r += s;
+  }
+  <span class="hljs-keyword">return</span> r;
+}
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">formatTime</span>: formatTime
+}
+</code></pre>
+<h2 id="&#x4F7F;&#x7528;">&#x4F7F;&#x7528;</h2>
+<p><a href="index/index.wxml">index.wxml</a></p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- &#x5F15;&#x7528; --&gt;</span>
+<span class="hljs-comment">&lt;!-- &lt;wxs src=&quot;tools.wxs&quot; module=&quot;tools&quot; /&gt; --&gt;</span>
+<span class="hljs-comment">&lt;!-- &#x4F7F;&#x7528; --&gt;</span>
+<span class="hljs-comment">&lt;!-- &lt;view&gt;{{tools.formatTime(time,&quot;MM.dd HH:mm&quot;)}}&lt;/view&gt; --&gt;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../1.Text out of range ellipsis/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 文字超出省略号表示">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"时间格式化","level":"1.3.2","depth":2,"previous":{"title":"文字超出省略号表示","level":"1.3.1","depth":2,"path":"WeChatExamples/1.Text out of range ellipsis/README.md","ref":"WeChatExamples/1.Text out of range ellipsis/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-sharing","-search","highlight","search-plus","github","sharing-plus","chapter-fold","code","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/linyisonger"},"livereload":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"fontsettings":{"theme":"night","family":"serif","size":2},"highlight":{},"sharing":{"qq":false,"all":["facebook","google","weibo","qq"],"douban":false,"facebook":false,"weibo":false,"whatsapp":false,"line":false,"google":false,"qzone":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"林一怂儿","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端笔记","language":"zh-hans","gitbook":"3.2.3","description":"都不晓得这个详情再哪里看"},"file":{"path":"WeChatExamples/2.Format time/README.md","mtime":"2020-01-15T02:16:21.693Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-15T02:16:30.278Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

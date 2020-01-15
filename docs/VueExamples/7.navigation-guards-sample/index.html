@@ -1,0 +1,519 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>导航守卫样例-登录 · 前端笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="林一怂儿">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../8.axios/" />
+    
+    
+    <link rel="prev" href="../6.cookie/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Vue示例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1.initial/">
+            
+                <a href="../1.initial/">
+            
+                    
+                    初识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../2.setting-environment-variables/">
+            
+                <a href="../2.setting-environment-variables/">
+            
+                    
+                    环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../3.deploy-to-docker/">
+            
+                <a href="../3.deploy-to-docker/">
+            
+                    
+                    部署到docker上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../4.signalr-client/">
+            
+                <a href="../4.signalr-client/">
+            
+                    
+                    SignalR使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../5.signalr-client-jwt/">
+            
+                <a href="../5.signalr-client-jwt/">
+            
+                    
+                    SignalR带身份使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../6.cookie/">
+            
+                <a href="../6.cookie/">
+            
+                    
+                    Cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    导航守卫样例-登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../8.axios/">
+            
+                <a href="../8.axios/">
+            
+                    
+                    axios请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../WeChatExamples/">
+            
+                <a href="../../WeChatExamples/">
+            
+                    
+                    WeChat示例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../WeChatExamples/1.Text out of range ellipsis/">
+            
+                <a href="../../WeChatExamples/1.Text out of range ellipsis/">
+            
+                    
+                    文字超出省略号表示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../WeChatExamples/2.Format time/">
+            
+                <a href="../../WeChatExamples/2.Format time/">
+            
+                    
+                    时间格式化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >导航守卫样例-登录</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5BFC;&#x822A;&#x5B88;&#x536B;&#x6837;&#x4F8B;-&#x767B;&#x5F55;">&#x5BFC;&#x822A;&#x5B88;&#x536B;&#x6837;&#x4F8B;-&#x767B;&#x5F55;</h1>
+<h2 id="&#x4E3B;&#x8981;&#x4EE3;&#x7801;">&#x4E3B;&#x8981;&#x4EE3;&#x7801;</h2>
+<p>&#x65B0;&#x5EFA;utils&#x6587;&#x4EF6;&#x5939;</p>
+<p>&#x65B0;&#x5EFA;<a href="src/utils/helper.js">helper.js</a></p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * &#x83B7;&#x53D6;cookie
+ * @param {string} name cookie &#x540D;&#x79F0;
+ */</span>
+<span class="hljs-keyword">static</span> getCookie(name) {
+    name += <span class="hljs-string">&quot;=&quot;</span>;
+    <span class="hljs-keyword">let</span> ca = <span class="hljs-built_in">document</span>.cookie.split(<span class="hljs-string">&apos;;&apos;</span>);
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; ca.length; i++) {
+        <span class="hljs-keyword">let</span> c = ca[i];
+        <span class="hljs-keyword">while</span> (c.charAt(<span class="hljs-number">0</span>) == <span class="hljs-string">&apos; &apos;</span>) c = c.substring(<span class="hljs-number">1</span>);
+        <span class="hljs-keyword">if</span> (c.indexOf(name) != <span class="hljs-number">-1</span>) <span class="hljs-keyword">return</span> c.substring(name.length, c.length);
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+}
+<span class="hljs-comment">/**
+ * &#x8BBE;&#x7F6E;cookie
+ * @param {string} name cookie &#x540D;&#x79F0;
+ * @param {string} value cookie &#x503C;
+ * @param {number} expire s &#x9ED8;&#x8BA4;2592000s = 30 &#x5929;
+ */</span>
+<span class="hljs-keyword">static</span> setCookie(name, value, expire = <span class="hljs-number">2592000</span>) {
+    <span class="hljs-keyword">let</span> date = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    date.setSeconds(date.getSeconds() + expire)
+    <span class="hljs-built_in">document</span>.cookie = name + <span class="hljs-string">&quot;=&quot;</span> + value + <span class="hljs-string">&quot;; expires=&quot;</span> + date.toGMTString()
+}
+<span class="hljs-comment">/**
+ * &#x79FB;&#x9664;cookie
+ * @param {string} name cookie &#x540D;&#x79F0;
+ */</span>
+<span class="hljs-keyword">static</span> removeCookie(name) {
+    <span class="hljs-keyword">this</span>.setCookie(name, <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-number">-1</span>)
+}
+</code></pre>
+<p>&#x65B0;&#x5EFA;<a href="src/views/Login.vue">Login.vue</a>&#x9875;&#x9762;</p>
+<pre><code class="lang-vue">&lt;template&gt;
+  &lt;!-- --&gt;
+    &lt;div class=&quot;form-inputs&quot;&gt;
+      &lt;input v-model=&quot;formData.name&quot; type=&quot;text&quot; placeholder=&quot;&#x8BF7;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&quot; /&gt;
+      &lt;input v-model=&quot;formData.pass&quot; type=&quot;password&quot; placeholder=&quot;&#x8BF7;&#x8F93;&#x5165;&#x5BC6;&#x7801;&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;button type=&quot;submit&quot; @click=&quot;submitForm&quot; :disabled=&quot;!allowSubmit&quot;&gt;&#x767B;&#x5F55;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;!-- --&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Helper from &quot;../utils/helper&quot;;
+export default {
+  data() {
+    return {
+      allowSubmit: true,
+      formData: {
+        name: &quot;&quot;,
+        pass: &quot;&quot;
+      }
+    };
+  },
+  methods: {
+    submitForm() {
+      let name = this.formData.name;
+      let pass = this.formData.pass;
+      if (!name) alert(&quot;&#x7528;&#x6237;&#x540D;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&quot;);
+      if (!pass) alert(&quot;&#x5BC6;&#x7801;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&quot;);
+
+      this.allowSubmit = false;
+      // TODO &#x8BF7;&#x6C42;&#x670D;&#x52A1;&#x5668;
+
+      // &#x83B7;&#x53D6;Token  (&#x8FD9;&#x91CC;&#x7528;name+pass&#x8868;&#x793A;)
+      Helper.setCookie(&quot;token&quot;, name + pass);
+      let redirectUrl = this.$route.query.redirectUrl;
+      this.$router.push({ path: redirectUrl || &quot;/&quot; });
+    }
+  }
+};
+&lt;/script&gt;
+</code></pre>
+<p>&#x8BBE;&#x7F6E;&#x5BFC;&#x822A;&#x5B88;&#x536B; <a href="src/router/index.js">router.js</a></p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x6DFB;&#x52A0;&#x767B;&#x9646;&#x8DEF;&#x7531;</span>
+{
+    <span class="hljs-attr">path</span>: <span class="hljs-string">&quot;/Login&quot;</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Login&quot;</span>,
+    <span class="hljs-attr">component</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&apos;../views/Login.vue&apos;</span>)
+}
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x5224;&#x65AD;&#x9700;&#x4E0D;&#x9700;&#x8981;Login</span>
+router.beforeEach(<span class="hljs-function">(<span class="hljs-params">to, <span class="hljs-keyword">from</span>, next</span>) =&gt;</span> {
+  <span class="hljs-keyword">let</span> token = Helper.getCookie(<span class="hljs-string">&quot;token&quot;</span>);
+  <span class="hljs-keyword">if</span> (to.name === <span class="hljs-string">&apos;Login&apos;</span>) {
+    next();
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (token) {
+    next();
+  } <span class="hljs-keyword">else</span> {
+    next({
+      <span class="hljs-attr">path</span>: <span class="hljs-string">&apos;/Login&apos;</span>,
+      <span class="hljs-attr">query</span>: {
+        <span class="hljs-attr">redirectUrl</span>: to.fullPath
+      }
+    });
+  }
+});
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../6.cookie/" class="navigation navigation-prev " aria-label="Previous page: Cookie">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../8.axios/" class="navigation navigation-next " aria-label="Next page: axios请求">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"导航守卫样例-登录","level":"1.2.7","depth":2,"next":{"title":"axios请求","level":"1.2.8","depth":2,"path":"VueExamples/8.axios/README.md","ref":"VueExamples/8.axios/README.md","articles":[]},"previous":{"title":"Cookie","level":"1.2.6","depth":2,"path":"VueExamples/6.cookie/README.md","ref":"VueExamples/6.cookie/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-sharing","-search","highlight","search-plus","github","sharing-plus","chapter-fold","code","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/linyisonger"},"livereload":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"fontsettings":{"theme":"night","family":"serif","size":2},"highlight":{},"sharing":{"qq":false,"all":["facebook","google","weibo","qq"],"douban":false,"facebook":false,"weibo":false,"whatsapp":false,"line":false,"google":false,"qzone":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"林一怂儿","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端笔记","language":"zh-hans","gitbook":"3.2.3","description":"都不晓得这个详情再哪里看"},"file":{"path":"VueExamples/7.navigation-guards-sample/README.md","mtime":"2019-12-13T02:02:08.494Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-15T02:16:30.278Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

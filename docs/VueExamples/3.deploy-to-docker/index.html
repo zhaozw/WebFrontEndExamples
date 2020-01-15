@@ -1,0 +1,459 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>部署到docker上 · 前端笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="林一怂儿">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../4.signalr-client/" />
+    
+    
+    <link rel="prev" href="../2.setting-environment-variables/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Vue示例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1.initial/">
+            
+                <a href="../1.initial/">
+            
+                    
+                    初识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../2.setting-environment-variables/">
+            
+                <a href="../2.setting-environment-variables/">
+            
+                    
+                    环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    部署到docker上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../4.signalr-client/">
+            
+                <a href="../4.signalr-client/">
+            
+                    
+                    SignalR使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../5.signalr-client-jwt/">
+            
+                <a href="../5.signalr-client-jwt/">
+            
+                    
+                    SignalR带身份使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../6.cookie/">
+            
+                <a href="../6.cookie/">
+            
+                    
+                    Cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../7.navigation-guards-sample/">
+            
+                <a href="../7.navigation-guards-sample/">
+            
+                    
+                    导航守卫样例-登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../8.axios/">
+            
+                <a href="../8.axios/">
+            
+                    
+                    axios请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../WeChatExamples/">
+            
+                <a href="../../WeChatExamples/">
+            
+                    
+                    WeChat示例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../WeChatExamples/1.Text out of range ellipsis/">
+            
+                <a href="../../WeChatExamples/1.Text out of range ellipsis/">
+            
+                    
+                    文字超出省略号表示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../WeChatExamples/2.Format time/">
+            
+                <a href="../../WeChatExamples/2.Format time/">
+            
+                    
+                    时间格式化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >部署到docker上</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="3&#x90E8;&#x7F72;&#x5230;docker&#x4E0A;">3.&#x90E8;&#x7F72;&#x5230;docker&#x4E0A;</h1>
+<h2 id="&#x65B0;&#x5EFA;">&#x65B0;&#x5EFA;</h2>
+<p><a href="default.conf">default.conf</a></p>
+<pre><code>server {
+  listen       80;
+  access_log  /var/log/nginx/host.access.log;
+
+  location / {
+    root   /usr/share/nginx/html;
+    index  index.html index.htm;
+    try_files $uri $uri/ /index.html;    
+  }
+
+  #error_page  404              /404.html;
+
+  # redirect server error pages to the static page /50x.html
+  #
+  error_page   500 502 503 504  /50x.html;
+  location = /50x.html {
+    root   /usr/share/nginx/html;
+  }
+}
+</code></pre><p><a href="Dockerfile">Dockerfile</a></p>
+<pre><code class="lang-dockerfile"><span class="hljs-keyword">FROM</span> nginx:<span class="hljs-number">1.15</span>
+<span class="hljs-keyword">COPY</span><span class="bash"> dist/  /usr/share/nginx/html/
+</span><span class="hljs-keyword">ADD</span><span class="bash"> default.conf /etc/nginx/conf.d/
+</span><span class="hljs-keyword">WORKDIR</span><span class="bash"> /usr/share/nginx/html
+</span><span class="hljs-keyword">RUN</span><span class="bash"> chmod -R a+rx *
+</span></code></pre>
+<p><a href="docker-compose.yml">docker-compose.yml</a></p>
+<pre><code class="lang-yml"><span class="hljs-attr">version:</span> <span class="hljs-string">&quot;2&quot;</span>
+<span class="hljs-attr">services:</span>
+<span class="hljs-attr">  vue:</span>
+<span class="hljs-attr">    build:</span>
+<span class="hljs-attr">      context:</span> .
+<span class="hljs-attr">      dockerfile:</span> Dockerfile
+    <span class="hljs-comment"># &#x955C;&#x50CF;&#x540D;&#x79F0;</span>
+<span class="hljs-attr">    image:</span> vue:<span class="hljs-number">1.0</span><span class="hljs-number">.0</span> 
+<span class="hljs-attr">    ports:</span>
+<span class="hljs-bullet">      -</span> <span class="hljs-number">5000</span>:<span class="hljs-number">80</span>
+<span class="hljs-attr">    restart:</span> always
+    <span class="hljs-comment"># &#x5BB9;&#x5668;&#x540D;&#x79F0;</span>
+<span class="hljs-attr">    container_name:</span> <span class="hljs-string">&quot;vue&quot;</span>
+</code></pre>
+<h2 id="&#x6784;&#x5EFA;&#x547D;&#x4EE4;">&#x6784;&#x5EFA;&#x547D;&#x4EE4;</h2>
+<p><code>docker-compose up --force-recreate --build -d</code></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../2.setting-environment-variables/" class="navigation navigation-prev " aria-label="Previous page: 环境变量">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../4.signalr-client/" class="navigation navigation-next " aria-label="Next page: SignalR使用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"部署到docker上","level":"1.2.3","depth":2,"next":{"title":"SignalR使用","level":"1.2.4","depth":2,"path":"VueExamples/4.signalr-client/README.md","ref":"VueExamples/4.signalr-client/README.md","articles":[]},"previous":{"title":"环境变量","level":"1.2.2","depth":2,"path":"VueExamples/2.setting-environment-variables/README.md","ref":"VueExamples/2.setting-environment-variables/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-sharing","-search","highlight","search-plus","github","sharing-plus","chapter-fold","code","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/linyisonger"},"livereload":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"fontsettings":{"theme":"night","family":"serif","size":2},"highlight":{},"sharing":{"qq":false,"all":["facebook","google","weibo","qq"],"douban":false,"facebook":false,"weibo":false,"whatsapp":false,"line":false,"google":false,"qzone":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"林一怂儿","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端笔记","language":"zh-hans","gitbook":"3.2.3","description":"都不晓得这个详情再哪里看"},"file":{"path":"VueExamples/3.deploy-to-docker/README.md","mtime":"2019-12-12T09:24:29.455Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-15T02:16:30.278Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

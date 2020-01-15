@@ -1,14 +1,3 @@
-# 时间格式化
-
-## 预览效果
-
-![preview](preview.png)
-
-## 主要代码
-
-[tools.wxs](index/tools.wxs)
-
-```js
 var formatTime = function(date, format = "") {
   var y = date.substring(0, 4);   // 年
   var m = date.substring(5, 7);   // 月 
@@ -39,16 +28,3 @@ var createStr = function (s, c) {
 module.exports = {
   formatTime: formatTime
 }
-```
-
-## 使用
-
-[index.wxml](index/index.wxml)
-
-``` html
-<!-- 引用 -->
-<!-- <wxs src="tools.wxs" module="tools" /> -->
-<!-- 使用 -->
-<!-- <view>{{tools.formatTime(time,"MM.dd HH:mm")}}</view> -->
-```
-

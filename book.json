@@ -1,0 +1,46 @@
+{
+    "title": "前端笔记",
+    "author": "林一怂儿",
+    "description": "都不晓得这个详情再哪里看",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "plugins": [
+        "-lunr",
+        "-sharing",
+        "-search",
+        "highlight",
+        "search-plus",
+        "github",
+        "sharing-plus",
+        "chapter-fold",
+        "code"
+    ],
+    "pluginsConfig": {
+        "chapter-fold": {},
+        "github": {
+            "url": "https://github.com/linyisonger"
+        },
+        "sharing": {
+            "douban": false,
+            "facebook": false,
+            "google": false,
+            "line": false,
+            "qq": false,
+            "qzone": false,
+            "weibo": false,
+            "whatsapp": false,
+            "all": [
+                "facebook",
+                "google",
+                "weibo",
+                "qq"
+            ]
+        },
+        "fontsettings": {
+            "theme": "night",
+            "family": "serif",
+            "size": 2
+        }
+    }
+    
+}
