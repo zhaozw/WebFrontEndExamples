@@ -13,4 +13,8 @@
 * [WeChat示例](WeChatExamples/README.md)
   * [文字超出省略号表示](WeChatExamples/1.Text out of range ellipsis/README.md)
   * [时间格式化](WeChatExamples/2.Format time/README.md)
+* [CocosCreator示例](CocosCreatorExamples/README.md)
+  * [拼图示例](CocosCreatorExamples/1-JigsawPuzzle/README.md)
+
+
 
