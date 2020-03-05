@@ -1,2 +1,5 @@
 node_modules/
 _book/
+LayaAirExamples/2048/.rpt2_cache/
+LayaAirExamples/2048/src/*.js
+LayaAirExamples/2048/src/*/*.js
