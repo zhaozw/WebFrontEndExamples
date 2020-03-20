@@ -1,0 +1,4 @@
+{
+  "code": "export default class UITest extends Laya.Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onAwake() {\r\n        console.log('hello world');\r\n        Laya.Scene3D.load(\"res/LayaScene_SampleScene/Conventional/SampleScene.ls\", Laya.Handler.create(this, this.onLoadSceneFinish));\r\n    }\r\n    onLoadSceneFinish(loadScene) {\r\n        console.log(loadScene);\r\n        Laya.stage.addChild(loadScene);\r\n        let cube = loadScene.getChildByName('Cube');\r\n        console.log(cube);\r\n    }\r\n}\r\n",
+  "references": []
+}

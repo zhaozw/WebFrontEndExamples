@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "kenan_left",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.4,
+  "sample": 10,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "727f0b82-df53-480f-b0a1-e34ec243dcb8"
+            }
+          },
+          {
+            "frame": 0.1,
+            "value": {
+              "__uuid__": "7b74ac94-321a-4b90-a109-feed75599bdd"
+            }
+          },
+          {
+            "frame": 0.2,
+            "value": {
+              "__uuid__": "d3212165-76c5-4882-bd4a-d42b732fab97"
+            }
+          },
+          {
+            "frame": 0.3,
+            "value": {
+              "__uuid__": "d34e39ac-3ef6-4c83-bd6d-76fbb2caef30"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

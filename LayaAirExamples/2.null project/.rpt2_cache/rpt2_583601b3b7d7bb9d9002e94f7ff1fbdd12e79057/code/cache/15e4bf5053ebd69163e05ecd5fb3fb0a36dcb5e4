@@ -1,0 +1,4 @@
+{
+  "code": "export default class CameraFollow extends Laya.Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onAwake() {\r\n        Laya.stage.on('MoveCamera', this, this.follow);\r\n    }\r\n    follow(localPositionX, localPositionZ) {\r\n        console.log(2);\r\n        let camera = this.owner;\r\n        localPositionX += camera.transform.localPositionX;\r\n        localPositionZ += camera.transform.localPositionZ;\r\n        camera.transform.localPositionX = localPositionX;\r\n        camera.transform.localPositionZ = localPositionZ;\r\n    }\r\n}\r\n",
+  "references": []
+}

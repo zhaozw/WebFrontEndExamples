@@ -1,0 +1,4 @@
+{
+  "code": "export class CameraController extends Laya.Script3D {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onAwake() {\r\n        this.cameraHandle = this.owner.parent;\r\n        this.playerHandle = this.cameraHandle.parent;\r\n        console.log(this.cameraHandle, this.playerHandle);\r\n    }\r\n}\r\n",
+  "references": []
+}

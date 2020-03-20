@@ -1,0 +1,4 @@
+{
+  "code": "export default class UserControl extends Laya.Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onAwake() {\r\n        Laya.stage.on('MoveUser', this, this.move);\r\n    }\r\n    move(localPositionX, localPositionZ) {\r\n        let user = this.owner;\r\n        localPositionX += user.transform.localPositionX;\r\n        localPositionZ += user.transform.localPositionZ;\r\n        user.transform.localPositionX = localPositionX;\r\n        user.transform.localPositionZ = localPositionZ;\r\n    }\r\n}\r\n",
+  "references": []
+}

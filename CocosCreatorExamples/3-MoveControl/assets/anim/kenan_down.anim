@@ -1,0 +1,37 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "kenan_down",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.3,
+  "sample": 10,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "c4a95af2-f7c7-4f68-a2d6-c4ca68ff4a6d"
+            }
+          },
+          {
+            "frame": 0.1,
+            "value": {
+              "__uuid__": "2e92df6e-df36-4edd-ad9d-07e3e646d949"
+            }
+          },
+          {
+            "frame": 0.2,
+            "value": {
+              "__uuid__": "d13c6fda-164a-4525-8917-5b414b22b991"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

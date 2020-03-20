@@ -1,0 +1,7 @@
+{
+  "code": "import UIJoystick from \"./UIJoystick\";\r\nimport CameraFollow from \"./CameraFollow\";\r\nexport default class UITest extends Laya.Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onAwake() {\r\n        console.log('hello world');\r\n        Laya.Scene3D.load(\"res/LayaScene_SampleScene/Conventional/SampleScene.ls\", Laya.Handler.create(this, this.onLoadSceneFinish));\r\n    }\r\n    onLoadSceneFinish(loadScene) {\r\n        console.log(loadScene);\r\n        loadScene.zOrder = -1;\r\n        Laya.stage.addChild(loadScene);\r\n        let cube = loadScene.getChildByName('Cube');\r\n        let root = Laya.stage.getChildByName('root');\r\n        let scene = root.getChildAt(0);\r\n        let joystick = scene.getChildByName('Joystick');\r\n        let mainCamera = loadScene.getChildByName('Main Camera');\r\n        console.log(root, joystick, mainCamera);\r\n        mainCamera.addComponent(CameraFollow);\r\n        joystick.addComponent(UIJoystick).initObject(cube).initCamera(mainCamera);\r\n        console.log(cube, joystick);\r\n    }\r\n}\r\n",
+  "references": [
+    "C:/Users/app/Desktop/WebFrontEndExamples/LayaAirExamples/2.null project/src/script/UIJoystick.ts",
+    "C:/Users/app/Desktop/WebFrontEndExamples/LayaAirExamples/2.null project/src/script/CameraFollow.ts"
+  ]
+}
